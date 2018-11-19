@@ -1,0 +1,30 @@
+
+.navbar-light {
+  background-color: #d4d4d640;
+  border: 4px solid #8b6cc3;
+  border-radius: 0.3em;
+  .navbar-brand {
+    min-width: 13.1em;
+  }
+  .navbar-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1.9;
+  }
+}
+.btn-md {
+  margin: 0 0.5em;
+  padding: 0.1em 1.5em;
+}
+
+.img-brand {
+  width: 2.5em;
+  position: fixed;
+  top: 0.15em;
+  left: 0.3em;
+  @media screen and (min-width: 413px) { width: 3em; } 
+  @media screen and (min-width: 576px) {
+    left: 0.7em;
+    width: 2.7em;
+  }
+}

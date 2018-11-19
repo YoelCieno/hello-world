@@ -1,0 +1,68 @@
+
+Todos:
+
+  @today @started(18-11-17 05:20)
+
+  New:
+
+    - @critical change the styles totally
+    - @high Finish UD calls
+    - @high make and pass TDD Unit Test
+    - @low Add FontAwesome, now FortAwesome 5
+    - @low Implement https://nestjs.com/    
+
+  Doing:
+
+    - @high We can obtain the id of null
+    
+  Alternatives:
+
+      ✔ @low
+      - @low
+
+  Done:
+
+  ✔ @high Start the project with ngx, stores and entities. @done(18-11-17 06:08)
+  ✔ @high Get users from API @done(18-11-17 06:08)
+  ✔ @critical  @today CORS on POST service call to create a new user @done(18-11-17 17:17)
+
+  Archive:
+
+  ✔ This
+
+  Cancelled:
+
+  ✘ Checked
+
+
+Names conventions:
+
+  ✔ v-module = vanilla-module
+
+Docu:
+  // Media Queries
+  ▪ xScreen      = 25.875 => 413px
+  ▪ smXScreen    = 34.375 => 550px
+  ▪ smScreen     = 45     => 720px
+  ▪ mdiPadT      = 48     => 768px
+  ▪ niScreen     = 62     => 992px
+  ▪ nxiPadT      = 64     => 1024px
+  ▪ lgScreen     = 90     => 1440px
+  ▪ xlgScreen    = 160    => 2560px (4K)
+
+  On after can do this?
+  `` 
+    SASS:
+
+Document:
+
+  'Cmd/Ctrl+Enter' // Triggers `Todo: Toggle Box`
+  'Alt+D' // Triggers `Todo: Toggle Done`
+  'Alt+C' // Triggers `Todo: Toggle Cancelled`
+  'Alt+S' // Triggers `Todo: Toggle Start`
+  'Cmd/Ctrl+Shift+A' // Triggers  `Todo: Archive`
+
+  Custom symbols: you can replace the default symbols with any of the supported ones
+    Box: - ❍ ❑ ■ ⬜ □ ☐ ▪ ▫ – — ≡ → › [] [ ]
+    Done: ✔ ✓ ☑ + [x] [X] [+]
+    Cancelled: ✘ x X [-]

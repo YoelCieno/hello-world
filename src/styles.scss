@@ -1,0 +1,61 @@
+@import 'variables';
+@import 'global';
+
+// BOOTSTRAP  
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/root';
+@import '~bootstrap/scss/reboot';
+@import '~bootstrap/scss/type';
+@import '~bootstrap/scss/code';
+@import '~bootstrap/scss/grid';
+@import '~bootstrap/scss/tables';
+@import '~bootstrap/scss/forms';
+@import '~bootstrap/scss/buttons';
+@import '~bootstrap/scss/transitions';
+@import '~bootstrap/scss/input-group';
+@import '~bootstrap/scss/nav';
+@import '~bootstrap/scss/navbar';
+@import '~bootstrap/scss/badge';
+@import '~bootstrap/scss/utilities';
+@import '~bootstrap/scss/print';
+@import '~bootstrap/scss/card';
+
+// We can use this bootstrap modules sass if we need them
+// @import '~bootstrap/scss/images';
+// @import '~bootstrap/scss/list-group';
+// @import '~bootstrap/scss/custom-forms';
+// @import '~bootstrap/scss/button-group';
+// @import '~bootstrap/scss/alert';
+// @import '~bootstrap/scss/dropdown';
+// @import '~bootstrap/scss/breadcrumb';
+// @import '~bootstrap/scss/modal';
+// @import '~bootstrap/scss/tooltip';
+// @import '~bootstrap/scss/close';
+// @import '~bootstrap/scss/media';
+// @import '~bootstrap/scss/popover';
+// @import '~bootstrap/scss/progress';
+// @import '~bootstrap/scss/pagination';
+// @import '~bootstrap/scss/jumbotron';
+// @import '~bootstrap/scss/carousel';
+
+// FONT-AWESOME
+@import '~font-awesome/scss/_variables';
+@import '~font-awesome/scss/_mixins';
+@import '~font-awesome/scss/_path';
+@import '~font-awesome/scss/_core';
+@import '~font-awesome/scss/_icons';
+@import '~font-awesome/scss/_screen-reader';
+
+// We can use this font-awesome modules sass if we need them
+// @import '~font-awesome/scss/_larger';
+// @import '~font-awesome/scss/_list';
+// @import '~font-awesome/scss/_bordered-pulled';
+// @import '~font-awesome/scss/_fixed-width';
+// @import '~font-awesome/scss/_animated';
+// @import '~font-awesome/scss/_rotated-flipped';
+// @import '~font-awesome/scss/_stacked';
+
+// Components
+@import 'src/app/core/components/toolbar/toolbar.component.scss';

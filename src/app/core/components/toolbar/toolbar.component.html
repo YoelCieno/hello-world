@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-sm navbar-light">
+  <a class="navbar-brand" routerLink="/">
+    
+    <span class="navbar-title ml-5 pl-4" *ngIf="title">
+      <img src='assets/img/helloworld.svg' class="img-brand img-thumbnail">{{ title }}
+    </span>
+  </a>
+  <div class="navbar-collapse" id="main-navbar">
+    <section class="form-inline d-flex justify-content-center">
+      <button class="btn btn-outline-primary btn-md" type="button"
+              [routerLink]="['/users']"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }">
+        <i class="fa fa-list-ul" aria-hidden="true"></i> Index
+      </button>
+      <button class="btn btn-outline-primary btn-md" 
+              [routerLink]="['/users', 'new']"
+              routerLinkActive="active"type="button">
+        <i class="fa fa-plus-square" aria-hidden="true"></i> Nuevo
+      </button>
+    </section>
+  </div>
+</nav>

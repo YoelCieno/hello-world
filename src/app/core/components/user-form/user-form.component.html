@@ -1,0 +1,26 @@
+<form (submit)="submit()"  class="form" [formGroup]="form">
+
+  <div class="form-group" [hidden]="form.controls.id.value === 0">
+    <label for="id-input">id:</label>
+    <input id="id-input" type="number" class="form-control" formControlName="id" [attr.disabled]="true">
+  </div>
+
+  <div class="form-group">
+    <label for="name-input">Name:</label>
+    <input id="name-input" type="text" class="form-control" formControlName="name">
+  </div>
+
+  <div class="form-group">
+    <label for="birthdate-input">Birthdate:</label>
+    <input id="birthdate-input" type="date" class="form-control" formControlName="birthdate">
+  </div>
+
+  <div class="form-group">
+    <button type="submit"
+            [disabled]="!form.valid"
+            class="btn btn-outline-success float-right">
+      Guardar
+    </button>
+  </div>
+
+</form>

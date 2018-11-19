@@ -1,0 +1,21 @@
+
+
+<div class="user-details-container" *ngIf="user">
+
+  <div class="hw-card">
+    <div class="card-header">
+      Detalles del usuario
+    </div>
+    <div class="card-body">
+      <p>Id:  <span class="badge badge-primary">{{user.id}}</span></p>
+      <p>Nombre: <span class="badge badge-primary">{{user.name}}</span></p>
+      <p>Fecha de nacimiento:  <span class="badge badge-primary">{{user.birthdate}}</span></p>
+    </div>
+    <div class="card-footer text-muted text-right">
+      <button (click)="edit.emit(user)" class="btn btn-sm btn-outline-warning m-1"> Editar</button>
+      <button (click)="remove.emit(user)" class="btn btn-sm btn-outline-danger m-1"> Borrar</button>
+    </div>
+  </div>
+
+</div>
+
