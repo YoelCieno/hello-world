@@ -28,13 +28,13 @@ export class UsersEffects {
 
   @Effect()
   loadAll$: Observable<Action> = this.actions$.pipe(
-      ofType(UsersActionTypes.LOAD_ALL), // When LOAD ALL action is dispatched
-      startWith(new LoadAll()),
-      switchMap(() => this.usersService.index()), /* Hit the Users Index endpoint of our REST API */
-      /* Dispatch LoadAllSuccess action to the central store with id list returned by the backend as id*/
-      /* 'Users Reducers' will take care of the rest */
-      map((users: User[]) => new LoadAllSuccess(users))
-    );
+    ofType(UsersActionTypes.LOAD_ALL), // When LOAD ALL action is dispatched
+    startWith(new LoadAll()),
+    switchMap(() => this.usersService.index()), /* Hit the Users Index endpoint of our REST API */
+    /* Dispatch LoadAllSuccess action to the central store with id list returned by the backend as id*/
+    /* 'Users Reducers' will take care of the rest */
+    map((users: User[]) => new LoadAllSuccess(users))
+  );
 
   @Effect()
   load$: Observable<Action> = this.actions$.pipe(
@@ -48,29 +48,36 @@ export class UsersEffects {
   create$: Observable<Action> = this.actions$.pipe(
     ofType(UsersActionTypes.CREATE),
     map((action: Create) => action.payload),
-    switchMap((user) => this.usersService.create(user)),
-    map((createdUser: User) => new CreateSuccess(createdUser))/* ,
+    switchMap((user: User) => this.usersService.create(user).pipe(
+      map(() => new CreateSuccess({
+        name: user.name,
+        birthdate: user.birthdate
+      })),
+    )),
     catchError(err => {
       console.log(err['message']);
       return of(new Failure({concern: 'CREATE', error: err}));
-    }) */
+    })
   );
 
   @Effect()
   update$: Observable<Action> = this.actions$.pipe(
     ofType(UsersActionTypes.PUT),
     map((action: Put) => action.payload),
-    switchMap((user: User) => this.usersService.update(user)),
-    map((updatedUser: User) => new PutSuccess({
-      id: updatedUser.id,
-      changes: updatedUser
-    }))/* ,
-    catchError(err => {
-      alert(err['message']);
-      return of(new Failure({concern: 'PUT', error: err}));
-    }) */
+    switchMap(
+      (user: User) => this.usersService.update(user).pipe(
+        map(() => new PutSuccess({
+          id: user.id,
+          name: user.name,
+          birthdate: user.birthdate
+        })),
+        catchError(err => {
+          alert(err['message']);
+          return of(new Failure({concern: 'PUT', error: err}));
+        })
+      )
+    )
   );
-
 
   @Effect()
   destroy$: Observable<Action> = this.actions$.pipe(
@@ -83,7 +90,6 @@ export class UsersEffects {
     )
   );
 
-
   // Socket Live Events
 
   @Effect()
@@ -94,9 +100,7 @@ export class UsersEffects {
 
   @Effect()
   liveUpdate$: Observable<Action> = this.usersSocket.fromEvent(UsersActionTypes.LIVE_UPDATED).pipe(
-    map((user: User) => new PutSuccess({
-      id: user.id, changes: user
-    }))
+    map((user: User) => new PutSuccess(user))
   );
 
   @Effect()

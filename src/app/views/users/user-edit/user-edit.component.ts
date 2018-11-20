@@ -7,7 +7,7 @@ import {State} from '../store';
 import {ActivatedRoute, Router} from '@angular/router';
 
 import * as fromUsers from '@app-users-store';
-import {UsersActionTypes, Load, Put, PutSuccess} from '@app-users-store/actions/users-actions';
+import {UsersActionTypes, Put, PutSuccess} from '@app-users-store/actions/users-actions';
 import {filter} from 'rxjs/operators';
 import {ofType} from '@ngrx/effects';
 
@@ -32,32 +32,20 @@ export class UserEditComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit() {
-
     this.user$ = this.store.pipe(
       select(fromUsers.getCurrentUser)
     );
-
-    // The update effect fires?
     this.redirectSub = this.actionsSubject.pipe(
-        ofType(UsersActionTypes.PUT_SUCCESS),
-        filter((action: PutSuccess) => action.payload.id === +this.activatedRoute.snapshot.params['userId'])
-    ).subscribe(
-      (action: PutSuccess) => this.router.navigate(['/users', action.payload.id])
-    );
+      ofType(UsersActionTypes.PUT_SUCCESS),
+    ).subscribe((action: PutSuccess) =>  this.router.navigate(['/']));
+  }
 
-    this.activatedRoute.params.subscribe(params => {
-      // update our id?
-      this.store.dispatch(new Load(+params['userId']));
-    });
+  submitted(user: User) {
+    this.store.dispatch(new Put(user));
 
   }
 
   ngOnDestroy() {
     this.redirectSub.unsubscribe();
   }
-
-  submitted(user: User) {
-    this.store.dispatch(new Put(user));
-  }
-
 }

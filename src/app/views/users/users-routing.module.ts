@@ -17,7 +17,7 @@ const routes: Routes = [
         component: UsersIndexComponent,
         data: {title: 'Lista de usuarios'},
         pathMatch: 'full',
-        resolve: {title: TitleResolver}
+        resolve: {title: TitleResolver},
       },
       {
         path: 'new',

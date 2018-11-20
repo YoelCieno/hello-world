@@ -7,6 +7,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import * as fromUsers from '@app-users-store';
 import {Delete, SetCurrentUserId} from '@app-users-store/actions/users-actions';
 import * as fromRoot from '@app-root-store';
+import { UsersService } from '@app-core/services/users.service';
 
 
 @Component({
@@ -19,11 +20,13 @@ export class UsersIndexComponent implements OnInit {
 
   users$: Observable<User[]>;
 
-  constructor(public store: Store<fromRoot.State>, private router: Router, private actR: ActivatedRoute) { }
+  constructor(public store: Store<fromRoot.State>, private router: Router, private actR: ActivatedRoute,
+    private usersService: UsersService) { }
 
   ngOnInit() {
-    // getAllUsers selector from the main store allows us to monitor changes only on id list from the main state
-    // without monitoring the rest of the state
+    this.usersService.index().subscribe(users$ => {
+      users$ = users$;
+    });
     this.users$ = this.store.pipe(
       select(fromUsers.getAllUsers)
     );

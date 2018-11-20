@@ -1,6 +1,5 @@
 import {Action} from '@ngrx/store';
 import { User } from '@app-core/models';
-import {Update} from '@ngrx/entity/src/models';
 
 
 
@@ -82,7 +81,7 @@ export class CreateSuccess implements Action {
 
 export class PutSuccess implements Action {
   readonly type = UsersActionTypes.PUT_SUCCESS;
-  constructor(public payload: Update<User>) {}
+  constructor(public payload: User) {}
 }
 
 export class DeleteSuccess implements Action {

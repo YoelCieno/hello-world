@@ -28,8 +28,7 @@ export class UserNewComponent implements OnInit, OnDestroy {
     this.redirectSub = this.actionsSubject.asObservable().pipe(
       ofType(UsersActionTypes.CREATE_SUCCESS)
     ).subscribe(
-      // action.payload.id
-      (action: CreateSuccess) => this.router.navigate(['/', action.payload.id])
+      (action: CreateSuccess) => this.router.navigate(['/'])
     );
 
   }

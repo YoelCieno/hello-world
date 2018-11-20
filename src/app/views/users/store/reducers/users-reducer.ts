@@ -25,12 +25,10 @@ export const usersAdapter = createEntityAdapter<User>({
 
 export interface State extends EntityState<User> {
   currentUserId?: number;
-  currentUserName?: string;
 }
 
 export const INIT_STATE: State = usersAdapter.getInitialState({
   currentUserId: undefined,
-  currentUserName: null
 });
 
 
@@ -63,8 +61,7 @@ export function reducer(
 
     case UsersActionTypes.CREATE_SUCCESS : {
       return usersAdapter.addOne(payload, {
-        ...state,
-        currentUserName: payload.name
+        ...state
       });
     }
 

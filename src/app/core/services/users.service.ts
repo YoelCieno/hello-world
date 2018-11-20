@@ -3,7 +3,7 @@ import {Observable} from 'rxjs';
 import { User } from '@app-core/models';
 import {environment} from '../../../environments/environment';
 import {HttpClient, HttpHeaders } from '@angular/common/http';
-import { map } from 'rxjs/operators';
+
 
 const PROXY_URL = 'https://cors-anywhere.herokuapp.com/';
 const httpOptions = {
@@ -19,7 +19,6 @@ const httpOptions = {
 export class UsersService {
 
   constructor(private httpClient: HttpClient ) { }
-
 
   index(): Observable<User[]> {
     return this.httpClient
