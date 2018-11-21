@@ -9,7 +9,7 @@
     <div class="card-body">
       <p>Id:  <span class="badge badge-primary">{{user.id}}</span></p>
       <p>Nombre: <span class="badge badge-primary">{{user.name}}</span></p>
-      <p>Fecha de nacimiento:  <span class="badge badge-primary">{{user.birthdate}}</span></p>
+      <p>Fecha de nacimiento:  <span class="badge badge-primary">{{user.birthdate | date:"dd/MM/yy" }}</span></p>
     </div>
     <div class="card-footer text-muted text-right">
       <button (click)="edit.emit(user)" class="btn btn-sm btn-outline-warning m-1"> Editar</button>

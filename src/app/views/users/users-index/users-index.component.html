@@ -1,6 +1,6 @@
 <h4 class="mt-3 mt-sm-5">Lista de usuarios</h4>
-<app-user-list [users]="users$ | async"
-               (show)="showUser($event)"
-               (remove)="deleteUser($event)"
-               (edit)="editUser($event)"
-></app-user-list>
+  <app-user-list [users]="users$ | async"
+                (show)="showUser($event)"
+                (remove)="deleteUser($event)"
+                (edit)="editUser($event)">
+  </app-user-list>

@@ -50,6 +50,7 @@ export class UsersEffects {
     map((action: Create) => action.payload),
     switchMap((user: User) => this.usersService.create(user).pipe(
       map(() => new CreateSuccess({
+        id: user.id,
         name: user.name,
         birthdate: user.birthdate
       })),

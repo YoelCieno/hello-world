@@ -9,9 +9,9 @@
   </thead>
   <tbody>
   <tr class="user-row" *ngFor="let user of users; trackBy: usersTrackByFn">
-    <th scope="row">{{user.id}}</th>
-    <td>{{user.name}}</td>
-    <td>{{user.birthdate}}</td>
+    <th scope="row">{{ user.id }}</th>
+    <td>{{ user.name }}</td>
+    <td>{{ user.birthdate | date:"dd/MM/yy" }}</td>
     <td>
 
       <span class="float-right">

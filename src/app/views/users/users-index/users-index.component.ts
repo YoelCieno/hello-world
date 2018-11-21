@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit, Input} from '@angular/core';
 import { User } from '@app-core/models';
 import {Observable} from 'rxjs';
 import {select, Store} from '@ngrx/store';
@@ -18,18 +18,15 @@ import { UsersService } from '@app-core/services/users.service';
 })
 export class UsersIndexComponent implements OnInit {
 
+
   users$: Observable<User[]>;
 
   constructor(public store: Store<fromRoot.State>, private router: Router, private actR: ActivatedRoute,
     private usersService: UsersService) { }
 
   ngOnInit() {
-    this.usersService.index().subscribe(users$ => {
-      users$ = users$;
-    });
-    this.users$ = this.store.pipe(
-      select(fromUsers.getAllUsers)
-    );
+    this.usersService.index().subscribe(users$ => users$);
+    this.users$ = this.store.pipe(select(fromUsers.getAllUsers));
   }
 
   editUser(user: User) {
