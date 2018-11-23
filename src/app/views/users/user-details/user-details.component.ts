@@ -30,7 +30,7 @@ export class UserDetailsComponent implements OnInit, OnDestroy {
 
   constructor(
       private store: Store<fromRoot.State>,
-      private activatedRoute: ActivatedRoute,
+      private actR: ActivatedRoute,
       private router: Router,
       private actionsSubject: ActionsSubject
   ) {}
@@ -43,39 +43,29 @@ export class UserDetailsComponent implements OnInit, OnDestroy {
 
     // If the destroy effect fires, we check if the current id is the one being viewed, and redirect to index
     this.redirectSub = this.actionsSubject.pipe(
-        ofType(UsersActionTypes.DELETE_SUCCESS),
-        filter((action: DeleteSuccess) =>
-          action.payload === +this.activatedRoute.snapshot.params['userId'])
-  ).subscribe(_ => this.router.navigate(['/users']));
+      ofType(UsersActionTypes.DELETE_SUCCESS),
+      filter((action: DeleteSuccess) =>
+        action.payload === +this.actR.snapshot.params['userId'])
+    ).subscribe(_ => this.router.navigate(['/users']));
 
     this.redirectSub = this.actionsSubject.pipe(
       filter(action => action.type === UsersActionTypes.DELETE_SUCCESS),
-    ).subscribe(
-      _ => this.router.navigate(['/users'])
-    );
+    ).subscribe(_ => this.router.navigate(['/users']));
 
-
-    this.activatedRoute.params.subscribe(params => {
+    this.actR.params.subscribe(params => {
       // update our id from the backend in case it was modified by another client
       this.store.dispatch(new Load(+params['userId']));
     });
-
   }
 
-
   editUser(user: User) {
-
     this.store.dispatch(new SetCurrentUserId(user.id));
-
     this.router.navigate(['/users', user.id, 'edit']);
-
   }
 
   deleteUser(user: User) {
     const r = confirm('Are you sure?');
-    if (r) {
-      this.store.dispatch(new Delete(user.id));
-    }
+    if (r) { this.store.dispatch(new Delete(user.id)); }
   }
 
   ngOnDestroy() {

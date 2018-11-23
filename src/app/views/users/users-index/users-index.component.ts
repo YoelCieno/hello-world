@@ -5,9 +5,8 @@ import {select, Store} from '@ngrx/store';
 import {ActivatedRoute, Router} from '@angular/router';
 
 import * as fromUsers from '@app-users-store';
-import {Delete, SetCurrentUserId} from '@app-users-store/actions/users-actions';
+import {Delete, SetCurrentUserId, LoadAll} from '@app-users-store/actions/users-actions';
 import * as fromRoot from '@app-root-store';
-import { UsersService } from '@app-core/services/users.service';
 
 
 @Component({
@@ -21,12 +20,13 @@ export class UsersIndexComponent implements OnInit {
 
   users$: Observable<User[]>;
 
-  constructor(public store: Store<fromRoot.State>, private router: Router, private actR: ActivatedRoute,
-    private usersService: UsersService) { }
+  constructor(public store: Store<fromRoot.State>,
+              private router: Router,
+              private actR: ActivatedRoute) { }
 
   ngOnInit() {
-    this.usersService.index().subscribe(users$ => users$);
     this.users$ = this.store.pipe(select(fromUsers.getAllUsers));
+    this.actR.params.subscribe(params => { this.store.dispatch(new LoadAll); });
   }
 
   editUser(user: User) {
@@ -41,9 +41,7 @@ export class UsersIndexComponent implements OnInit {
 
   deleteUser(user: User) {
     const r = confirm('Are you sure?');
-    if (r) {
-      this.store.dispatch(new Delete(user.id));
-    }
+    if (r) { this.store.dispatch(new Delete(user.id)); }
   }
 
 }
