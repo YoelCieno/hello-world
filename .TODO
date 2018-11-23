@@ -8,11 +8,12 @@ Todos:
     - @high make and pass TDD Unit Test
     - @low Add FontAwesome, now FortAwesome 5
     - @low Implement https://nestjs.com/    
+    - @low Improve the styles and effects 
     
   Doing:
   
-    - @low Improve the styles and effects 
-    
+    -@today change the scaffolding to have a better improve styles 
+
     Alternatives:
     
     ✔ @low

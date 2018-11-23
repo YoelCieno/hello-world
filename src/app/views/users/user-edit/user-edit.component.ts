@@ -8,7 +8,6 @@ import {ActivatedRoute, Router} from '@angular/router';
 
 import * as fromUsers from '@app-users-store';
 import {UsersActionTypes, Put, PutSuccess} from '@app-users-store/actions/users-actions';
-import {filter} from 'rxjs/operators';
 import {ofType} from '@ngrx/effects';
 
 

@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
-import {UserListComponent} from '../components/user-list/user-list.component';
-import {UserFormComponent} from '../components/user-form/user-form.component';
-import {UserDetailsContainerComponent} from '../components/user-details/user-details-container.component';
-import {ToolbarComponent} from '../components/toolbar/toolbar.component';
 import {CommonModule} from '@angular/common';
-import {ReactiveFormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
-import {FooterComponent} from '@app-core/components/footer/footer.component';
+import {ReactiveFormsModule} from '@angular/forms';
+
+import {UserListComponent} from './user-list/user-list.component';
+import {UserFormComponent} from './user-form/user-form.component';
+import {UserDetailsContainerComponent} from './user-details/user-details-container.component';
+import {ToolbarComponent} from './toolbar/toolbar.component';
+import {FooterComponent} from './footer/footer.component';
 
 @NgModule({
   imports: [
@@ -29,4 +30,4 @@ import {FooterComponent} from '@app-core/components/footer/footer.component';
     FooterComponent
   ]
 })
-export class SharedModule { }
+export class ComponentsModule { }
