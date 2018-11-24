@@ -1,8 +1,11 @@
 
 .navbar-light {
-  background-color: #d4d4d640;
+  background-color: #f1f1f1;
   border: 4px solid #8b6cc3;
-  border-radius: 0.3em;
+  border-radius: 0.1em;
+  position: fixed;
+  width: 100%;
+  top: 0;
   .navbar-brand {
     min-width: 13.1em;
   }
@@ -19,7 +22,6 @@
 
 .img-brand {
   width: 2.5em;
-  position: fixed;
   top: 0.15em;
   left: 0.3em;
   @media screen and (min-width: 413px) { width: 3em; } 

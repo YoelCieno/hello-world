@@ -9,7 +9,7 @@ import {select, Store} from '@ngrx/store';
   `
     <app-toolbar [title]="currentPageTitle$ | async" ></app-toolbar>
 
-    <div class="container">
+    <div class="container mt-6 pt-5 pt-sm-1">
       <router-outlet></router-outlet>
       <app-footer></app-footer>
     </div>

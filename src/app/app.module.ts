@@ -11,7 +11,7 @@ import {SocketIoModule} from 'ngx-socket-io';
 import {environment} from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import * as fromRoot from '@app-root-store';
-import {ComponentsModule} from './components/components.module';
+import {ComponentsModule} from '@app-components/components.module';
 
 import { AppComponent } from './app.component';
 
