@@ -14,6 +14,7 @@ import {select, Store} from '@ngrx/store';
       <app-footer></app-footer>
     </div>
   `,
+  styleUrls: ['./app.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit {

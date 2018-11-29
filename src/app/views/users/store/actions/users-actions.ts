@@ -24,7 +24,6 @@ export enum UsersActionTypes {
 
   SET_CURRENT_USER_ID = '[Users] SET CURRENT USER ID',
 
-
   // SERVER SIDE SOCKET ACTIONS
 
   LIVE_CREATED = '[Users] LIVE CREATED',
@@ -52,7 +51,6 @@ export class Create implements Action {
   readonly type = UsersActionTypes.CREATE;
   constructor(public payload: User) {}
 }
-
 
 export class Put implements Action {
   readonly type = UsersActionTypes.PUT;
