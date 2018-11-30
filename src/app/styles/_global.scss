@@ -1,0 +1,9 @@
+.mt-6 {
+  margin-top: 5em !important;
+}
+
+.hw-card {
+  border: 2px solid $primary-light !important;
+  margin-top: 3em;
+  @extend .card;
+}

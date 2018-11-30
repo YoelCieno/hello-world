@@ -1,5 +1,6 @@
-@import 'variables';
-@import 'global';
+@import 'src/app/styles/variables';
+@import 'src/app/styles/bootstrap';
+@import 'src/app/styles/global';
 
 // FONT-AWESOME
 @import '~font-awesome/scss/_variables';
@@ -17,4 +18,3 @@
 // @import '~font-awesome/scss/_animated';
 // @import '~font-awesome/scss/_rotated-flipped';
 // @import '~font-awesome/scss/_stacked';
-

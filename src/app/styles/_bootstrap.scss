@@ -1,5 +1,5 @@
-@import 'variables';
-// BOOTSTRAP  
+
+// BOOTSTRAP
 @import '~bootstrap/scss/functions';
 @import '~bootstrap/scss/variables';
 @import '~bootstrap/scss/mixins';
@@ -37,9 +37,3 @@
 // @import '~bootstrap/scss/pagination';
 // @import '~bootstrap/scss/jumbotron';
 // @import '~bootstrap/scss/carousel';
-
-.hw-card {
-  border: 2px solid $primary-light !important;
-  margin-top: 3em;
-  @extend .card;
-}
