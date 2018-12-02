@@ -1,6 +1,15 @@
+// VARS
 @import 'src/app/styles/variables';
+
+// BOOTSTRAP
 @import 'src/app/styles/bootstrap';
+
+// GLOBAL STYLES
 @import 'src/app/styles/global';
+
+// APP COMPONENTS
+@import 'src/app/components/toolbar/toolbar.component.scss';
+
 
 // FONT-AWESOME
 @import '~font-awesome/scss/_variables';

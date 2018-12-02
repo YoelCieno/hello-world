@@ -5,31 +5,47 @@ Todos:
 
   New:
 
-    - Include webpack configuration to add bootstrap styles to components.scss
     - Use effects to include an animation service
     - @high make and pass TDD Unit Test
     - @low Add FontAwesome, now FortAwesome 5
     - @low Implement https://nestjs.com/
     - @low Improve the styles and effects 
-    
-  Doing:
   
-    Alternatives:
+  Doing:
+    
+
+
+  Alternatives:
+    
+    ✔ @low
+    - @low
+    
+  Check state:
+  
+    - @low change the compile process to avoid import paths from components 18-12-02 04:46
       
-      ✔ @low
-      - @low
+  Done:
       
-      Done:
-      
-    ✔ @low change the scaffolding to have a better improve styles @done(20-11-26 02:35)
-    ✔ use AngularDatePipe @done(18-11-23 06:12)
-    ✔ @high Update de index view when we edit a user @done(18-11-23 06:10)
-    ✔ @high We can obtain the id of null @done(18-11-20 05:25)
-    ✔ @critical change the styles totally @done(18-11-20 07:24)
-    ✔ @high Finish UD calls @done(18-11-20 05:24)
-    ✔ @high Start the project with ngx, stores and entities. @done(18-11-17 06:08)
-    ✔ @high Get users from API @done(18-11-17 06:08)
-    ✔ @critical CORS on POST service call to create a new user @done(18-11-17 17:17)
+    - @low change the scaffolding to have a better improve styles 
+      ✔ changed @done(18-12-02 04:54)
+    - use AngularDatePipe 
+      ✔ used @done(18-11-23 06:12)
+    - @high Update the index view when we edit a user 
+      ✔ changed @done(18-11-23 06:10)
+    - @high We can obtain the id of null 
+      ✔ changed @done(18-11-20 05:25)
+    - Include webpack configuration to add bootstrap styles to components.scss 
+      ✔ changed @done(18-11-20 07:24)
+    - @critical change the styles totally 
+      ✔ changed @done(18-11-20 07:24)
+    - @high Finish UD calls 
+      ✔ changed @done(18-11-20 05:24)
+    - @high Start the project with ngx, stores and entities. 
+      ✔ changed @done(18-11-17 06:08)
+    - @high Get users from API 
+      ✔ changed @done(18-11-17 06:08)
+    - @critical CORS on POST service call to create a new user 
+      ✔ changed @done(18-11-17 17:17)
 
   Archive:
 

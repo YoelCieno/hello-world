@@ -1,5 +1,10 @@
 // To font-awesome
 $fa-font-path : '../node_modules/font-awesome/fonts';
+
+//
+// Color system
+//
+
 // blues: 028ed4 2e93ff
 $blue:    #028ed4 !default;
 $indigo:  #6610f2 !default;
@@ -12,10 +17,6 @@ $yellow:  #ffc107 !default;
 $green:   #28a745 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
-
- //
-// Color system
-//
 
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
