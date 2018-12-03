@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",
-    "start": "cng serve",
+    "start": "cng serve --open",
     "build": "ng build",
     "build:dev": "ng build --configuration=dev",
     "build:prod": "ng build --prod",
