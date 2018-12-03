@@ -39,8 +39,8 @@ export class UsersEffects {
   @Effect()
   load$: Observable<Action> = this.actions$.pipe(
     ofType(UsersActionTypes.LOAD),
-    map( (action: Load ) => action.payload),
-    switchMap((id) => this.usersService.show(id)),
+    map((action: Load) => action.payload),
+    switchMap(id => this.usersService.show(id)),
     map((user: User) => new LoadSuccess(user))
   );
 

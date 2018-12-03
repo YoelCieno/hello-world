@@ -13,7 +13,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Development server
 This project try to use a websockets service. Therefore, if you don´t want console errors: you have to create or download and execute on terminal `node index.js` with this [simple-socket](https://github.com/YoelCieno/simple-socket).
 
-Run `ng serve` (or `yarn start` if you use **yarn**) for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+I have added this customized [CLI](https://github.com/nfriend/angular-cli-customizer) (thanks to [Natham](https://github.com/nfriend)) to add a personal webpack configuration to the Angular CLI webpack. Therefore run `cng serve` (or `yarn start` if you use **yarn**) for a dev server, navigate to `http://localhost:4200/` if you need. The app will automatically reload if you change any of the source files.
+
+## Styles
+We can add the Bootstrap component we need uncommented line into `_bootstrap.scss`. When we want populate bootstrap or customizes vars to a `scss` file component only have to add the component to `styles.scss`.
 
 ## Code scaffolding
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.

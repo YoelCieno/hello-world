@@ -8,12 +8,14 @@ import {select, Store} from '@ngrx/store';
   template: // html
   `
     <app-toolbar [title]="currentPageTitle$ | async" ></app-toolbar>
-
-    <div class="container">
+    // [@routeAnimations]="o.isActivated && o.activatedRoute.routeConfig.path"
+    <div class="container mt-6 pt-5 pt-sm-1">
       <router-outlet></router-outlet>
       <app-footer></app-footer>
     </div>
   `,
+  styleUrls: ['./app.component.scss'],
+  // animations: [routeAnimations],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit {

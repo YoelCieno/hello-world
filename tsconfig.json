@@ -22,9 +22,7 @@
       "@angular/*": ["node_modules/@angular/*"],
       "@app-root-store/*": ["src/app/store/*"],
       "@app-root-store": ["src/app/store/index"],
-
       "@app-users-store/*": ["src/app/views/users/store/*"],
-      "@app-users-store": ["src/app/views/users/store/index"]
-    }
+      "@app-users-store": ["src/app/views/users/store/index"]    }
   }
 }

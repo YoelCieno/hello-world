@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import {StoreModule} from '@ngrx/store';
 import {EffectsModule} from '@ngrx/effects';
 
-import {ComponentsModule} from '../../components/components.module';
+import {ComponentsModule} from '@app-components/components.module';
 import {UsersSocketService} from '@app-core/services/users-socket.service';
 import * as fromUsers from './store';
 

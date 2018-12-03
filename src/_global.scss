@@ -1,7 +1,0 @@
-@import 'variables';
-
-.hw-card {
-  border: 2px solid $primary-light !important;
-  margin-top: 3em;
-  @extend .card;
-}
