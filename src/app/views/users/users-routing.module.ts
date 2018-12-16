@@ -22,7 +22,7 @@ const routes: Routes = [
       {
         path: 'new',
         component: UserNewComponent,
-        data: {title: 'Nuevo usuario', animation: 'NewPage'},
+        data: {title: 'Nuevo usuario'},
         pathMatch: 'full',
         resolve: {title: TitleResolver}
       },
@@ -36,7 +36,7 @@ const routes: Routes = [
       {
         path: ':userId/edit',
         component: UserEditComponent,
-        data: {title: 'Editar usuario'},
+        data: {title: 'Editar usuario', animation: 'EditPage'},
         pathMatch: 'full',
         resolve: {title: TitleResolver}
       }
