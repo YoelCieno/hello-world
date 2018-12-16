@@ -1,12 +1,20 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component, HostBinding } from '@angular/core';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+  // ...
+} from '@angular/animations';
 
 @Component({
   selector: 'app-users',
-  template: // html
-  `
-    <!--<p>LIVE: {{(socket.connected$ | async) ? 'ON' : 'OFF'}}</p>-->
-    <router-outlet></router-outlet>
-  `,
+  templateUrl: './users.component.html',
+  styleUrls: ['./users.component.scss'],
+  animations: [
+    // animation triggers go here
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class UsersComponent {

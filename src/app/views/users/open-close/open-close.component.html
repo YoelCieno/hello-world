@@ -1,0 +1,8 @@
+<button class="btn btn-outline-primary btn-md mt-3" 
+        (click)="toggle()"
+        type="button">
+  <i class="fa fa-plus-square" aria-hidden="true"></i> Open / Close
+</button>
+<div [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container">
+  <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
+</div>

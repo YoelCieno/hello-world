@@ -4,7 +4,7 @@ import * as fromUsers from '@app-users-store';
 import { UsersIndexComponent } from './users-index.component';
 import {combineReducers, StoreModule} from '@ngrx/store';
 import {RouterTestingModule} from '@angular/router/testing';
-import {UserListComponent} from '@app-core/components/user-list/user-list.component';
+import {UserListComponent} from '@app-components/user-list/user-list.component';
 
 
 describe('UsersIndexComponent', () => {
