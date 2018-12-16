@@ -15,21 +15,21 @@ const routes: Routes = [
       {
         path: '',
         component: UsersIndexComponent,
-        data: {title: 'Lista de usuarios'},
+        data: {title: 'Lista de usuarios', animation: 'HomePage'},
         pathMatch: 'full',
         resolve: {title: TitleResolver},
       },
       {
         path: 'new',
         component: UserNewComponent,
-        data: {title: 'Nuevo usuario'},
+        data: {title: 'Nuevo usuario', animation: 'NewPage'},
         pathMatch: 'full',
         resolve: {title: TitleResolver}
       },
       {
         path: ':userId',
         component: UserDetailsComponent,
-        data: {title: 'Detalles'},
+        data: {title: 'Detalles', animation: 'DetailPage'},
         pathMatch: 'full',
         resolve: {title: TitleResolver}
       },

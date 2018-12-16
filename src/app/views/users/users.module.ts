@@ -15,7 +15,6 @@ import {UsersIndexComponent} from './users-index/users-index.component';
 import {UsersRoutingModule} from './users-routing.module';
 import {UsersEffects} from './store/effects/users-effects';
 
-import { OpenCloseComponent } from './open-close/open-close.component';
 
 @NgModule({
   imports: [
@@ -30,8 +29,7 @@ import { OpenCloseComponent } from './open-close/open-close.component';
     UserDetailsComponent,
     UserEditComponent,
     UserNewComponent,
-    UsersIndexComponent,
-    OpenCloseComponent
+    UsersIndexComponent
   ],
   providers: [UsersSocketService]
 })
