@@ -2,3 +2,17 @@
   height: 1.5em;
   width: 1.5em;
 }
+.hw-footer {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  .hw-footer__section {
+    background: rgba(236, 236, 236, 0.5);
+    bottom: 0;
+    left: 0;
+    padding-top: 1rem;
+    position: absolute;
+    width: 100%;
+  }
+}
